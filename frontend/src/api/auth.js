@@ -30,11 +30,7 @@ export const login = async (credentials) => {
     const error = await response.json();
     throw new Error(error.message || 'Login failed');
   }
-  // Add this after successful login
-    if (window.chrome && window.chrome.runtime) {
-      localStorage.setItem('chrome_session_workaround', Date.now());
-    }
-    
+  
   return await response.json();
 };
 

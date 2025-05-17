@@ -14,8 +14,8 @@ const sessionConfig = {
     maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
     httpOnly: true,
     sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
-    secure: true,
-  partitioned: true,
+    secure: process.env.NODE_ENV === 'production',
+    partitioned : true
     
   }
 };
