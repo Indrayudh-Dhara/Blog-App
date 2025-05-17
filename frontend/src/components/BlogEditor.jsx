@@ -328,13 +328,13 @@ useEffect(() => {
         <div className="flex gap-2">
           <button
             onClick={() => handleSave('draft')}
-            className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700"
+            className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 hover:cursor-pointer "
           >
             Save Draft
           </button>
           <button
             onClick={() => handleSave('published')}
-            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 hover:cursor-pointer"
             disabled={!user}
             title={!user ? 'You must be logged in to publish' : ''}
           >
