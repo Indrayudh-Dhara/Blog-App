@@ -30,6 +30,11 @@ app.use(session(sessionConfig));
 app.use('/api/auth', authRoutes);
 app.use('/api/blogs', blogRoutes);
 
+app.use((req, res, next) => {
+  console.log('Incoming cookies:', req.headers.cookie);
+  next();
+});
+
 // Error handling middleware
 app.use(errorHandler);
 
