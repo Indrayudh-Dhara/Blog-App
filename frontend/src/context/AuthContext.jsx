@@ -24,12 +24,12 @@ export const AuthProvider = ({ children }) => {
 
   const login = (userData) => {
     setUser(userData);
-    window.location.href = 'https://blog-app-5cog.onrender.com/';
+    window.location.href = '/';
   };
 
   const logout = async () => {
     try {
-      await fetch('https://blog-app-5cog.onrender.com/api/auth/logout', {
+      await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/logout`, {
         method: 'POST',
         credentials: 'include',
       });

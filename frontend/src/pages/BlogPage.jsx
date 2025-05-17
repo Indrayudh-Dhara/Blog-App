@@ -75,14 +75,14 @@ const BlogPage = () => {
         <div className="mt-4 flex justify-end gap-3">
           {isAuthor && (
           <Link 
-            to={`https://blog-app-5cog.onrender.com/edit/${blog._id}`} 
+            to={`/edit/${blog._id}`} 
             className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700"
           >
             Edit
           </Link>
           )}
           <Link 
-            to={`https://blog-app-5cog.onrender.com/`} 
+            to={`/`} 
             className="px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700"
           >
             Go to home

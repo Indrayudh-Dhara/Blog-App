@@ -22,7 +22,7 @@ const Register = () => {
     try {
       const response = await register({ username, email, password });
       authLogin(response.data);
-      navigate('https://blog-app-5cog.onrender.com/');
+      navigate('/');
     } catch (err) {
       setError(err.message || 'Registration failed. Please try again.');
     } finally {
@@ -105,7 +105,7 @@ const Register = () => {
         
         <div className="text-center text-sm">
           Already have an account?{' '}
-          <a href="https://blog-app-5cog.onrender.com/login" className="font-medium text-blue-600 hover:text-blue-500">
+          <a href="/login" className="font-medium text-blue-600 hover:text-blue-500">
             Login here
           </a>
         </div>
