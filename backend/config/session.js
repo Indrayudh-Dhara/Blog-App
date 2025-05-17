@@ -5,14 +5,21 @@ require('dotenv').config();
 const sessionConfig = {
   secret: process.env.SESSION_SECRET,
   resave: false,
-  saveUninitialized: false,
+  saveUninitialized: true,
+  
   store: MongoStore.create({
     mongoUrl: process.env.MONGO_URI,
+     crypto :{
+        secret: process.env.SECRET,
+     },
+     touchAfter: 24*3600, 
     collectionName: 'sessions'
   }),
   cookie: {
-    maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
+    expires: Date.now()+ 7*24*60*60*1000, // 1 week
+    maxAge :  7*24*60*60*1000,
     httpOnly: true,
+    
     sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
     secure: process.env.NODE_ENV === 'production',
     
