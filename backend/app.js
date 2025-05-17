@@ -9,9 +9,10 @@ const blogRoutes = require('./routes/blogRoutes');
 const {errorHandler} = require('./middleware/errorMiddleware');
 const { sessionConfig } = require('./config/session');
 
-app.set('trust proxy', 1);
+
 
 const app = express();
+app.set('trust proxy', 1);
 const allowedOrigins = [
   'https://blog-app-seven-tan.vercel.app',
   
