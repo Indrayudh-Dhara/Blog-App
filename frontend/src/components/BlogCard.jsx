@@ -8,7 +8,7 @@ const BlogCard = ({ blog }) => {
   return (
     <div className="bg-white rounded-lg shadow-md p-6 mb-4">
       <h2 className="text-xl font-bold mb-2">
-        <Link to={`/blog/${blog._id}`} className="hover:text-blue-600">
+        <Link to={`https://blog-app-5cog.onrender.com/blog/${blog._id}`} className="hover:text-blue-600">
           {blog.title}
         </Link>
         {blog.status === 'draft' && (
@@ -32,14 +32,14 @@ const BlogCard = ({ blog }) => {
       </p>
       <div className="flex justify-between items-center">
         <Link 
-          to={`/blog/${blog._id}`} 
+          to={`https://blog-app-5cog.onrender.com/blog/${blog._id}`} 
           className="text-blue-600 hover:text-blue-800 font-medium"
         >
           Read more
         </Link>
         {isAuthor && (
           <Link 
-            to={`/edit/${blog._id}`} 
+            to={`https://blog-app-5cog.onrender.com/edit/${blog._id}`} 
             className="text-gray-600 hover:text-gray-800 font-medium"
           >
             Edit

@@ -21,7 +21,7 @@ const Login = () => {
     try {
       const response = await login({ email, password });
       authLogin(response.data);
-      navigate('/');
+      navigate('https://blog-app-5cog.onrender.com/');
     } catch (err) {
       setError(err.message || 'Login failed. Please try again.');
     } finally {
@@ -88,7 +88,7 @@ const Login = () => {
         
         <div className="text-center text-sm">
           Don't have an account?{' '}
-          <a href="/register" className="font-medium text-blue-600 hover:text-blue-500">
+          <a href="https://blog-app-5cog.onrender.com/register" className="font-medium text-blue-600 hover:text-blue-500">
             Register here
           </a>
         </div>
