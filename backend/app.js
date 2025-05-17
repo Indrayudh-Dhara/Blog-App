@@ -11,9 +11,9 @@ const { sessionConfig } = require('./config/session');
 
 const app = express();
 const allowedOrigins = [
-  'https://blog-47yifnclm-indrayudh-dharas-projects.vercel.app',
+ 
   'https://blog-app-seven-tan.vercel.app',
-  'https://blog-app-git-main-indrayudh-dharas-projects.vercel.app'
+  
 ];
 
 // Middleware
