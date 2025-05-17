@@ -1,5 +1,5 @@
 export const getAllBlogs = async () => {
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/blogs`, {
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/blogs`, {
     credentials: 'include',
   });
 
@@ -11,7 +11,7 @@ export const getAllBlogs = async () => {
 };
 
 export const getBlogById = async (id) => {
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/blogs/${id}`, {
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/blogs/${id}`, {
     credentials: 'include',
   });
 
@@ -23,7 +23,7 @@ export const getBlogById = async (id) => {
 };
 
 export const saveDraft = async (blogData) => {
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/blogs`, {
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/blogs`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ export const saveDraft = async (blogData) => {
 };
 
 export const updateBlog = async (id, blogData) => {
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/blogs/${id}`, {
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/blogs/${id}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ export const updateBlog = async (id, blogData) => {
 };
 
 export const deleteBlog = async (id) => {
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/blogs/${id}`, {
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/blogs/${id}`, {
     method: 'DELETE',
     credentials: 'include',
   });

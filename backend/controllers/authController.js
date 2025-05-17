@@ -49,10 +49,6 @@ const login = async (req, res, next) => {
     
     // Set session
     req.session.userId = user._id;
-
-     console.log('=== LOGIN SUCCESS ===');
-    console.log('Set-Cookie Header:', res.getHeaders()['set-cookie']);
-    console.log('New Session:', req.session);
     
     res.json({
       success: true,

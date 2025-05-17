@@ -1,5 +1,5 @@
 export const register = async (userData) => {
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/register`, {
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/auth/register`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ export const register = async (userData) => {
 };
 
 export const login = async (credentials) => {
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, {
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/auth/login`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ export const login = async (credentials) => {
 };
 
 export const getCurrentUser = async () => {
-  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/me`, {
+  const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/auth/me`, {
     credentials: 'include',
   });
 
