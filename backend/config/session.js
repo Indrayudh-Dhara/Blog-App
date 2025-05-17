@@ -15,6 +15,10 @@ const sessionConfig = {
     httpOnly: true,
     sameSite: 'none',
     secure: true,
+    domain: process.env.NODE_ENV === 'production' 
+    ? '.onrender.com' // Leading dot for subdomains
+    : undefined // Local development
+
   }
 };
 
