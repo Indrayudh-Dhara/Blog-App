@@ -1,5 +1,9 @@
 # Blog Application
 
+# USE MICROSOFT EDGE BROWSER (NOT CHROME) FOR IT TO RUN PROPERLY 
+Chrome's new permission settings has been creating an issue with the sessions.
+
+# Description
 A full-stack blog platform with authentication, rich text editing, and auto-save functionality.
 
 🔗 **Live Demo**: [https://blog-app-seven-tan.vercel.app/](https://blog-app-seven-tan.vercel.app/)
