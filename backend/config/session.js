@@ -11,11 +11,11 @@ const sessionConfig = {
     collectionName: 'sessions'
   }),
   cookie: {
-    maxAge: 1000 * 60 * 60 * 24, // 1 day
+    maxAge: 1000 * 60 * 60 * 24 * 7, // 1 week
     httpOnly: true,
-    sameSite: 'none',
-    secure: true,
-    
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+    secure: process.env.NODE_ENV === 'production',
+    domain: process.env.NODE_ENV === 'production' ? '.onrender.com' : undefined
   }
 };
 
