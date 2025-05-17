@@ -17,10 +17,8 @@ const allowedOrigins = [
 
 // Middleware
 app.use(cors({
-  origin: (origin, callback) => {
-    callback(null, origin); // Reflects the request origin
-  },
-  credentials: true,
+  origin: allowedOrigins,
+  credentials: true
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
