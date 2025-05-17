@@ -1,0 +1,36 @@
+.editor-container {
+  max-width: 800px;
+   font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.editor-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.editor-title {
+  font-size: 22px;
+  font-weight: 700;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+.editor-content {
+  width: 100%;
+  min-height: 300px;
+  font-size: 15px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  resize: vertical;
+  background-color:inherit;
+}
