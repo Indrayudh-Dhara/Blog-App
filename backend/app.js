@@ -12,7 +12,8 @@ const { sessionConfig } = require('./config/session');
 const app = express();
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://blog-47yifnclm-indrayudh-dharas-projects.vercel.app'
+  'https://blog-47yifnclm-indrayudh-dharas-projects.vercel.app',
+  'https://blog-app-seven-tan.vercel.app'
 ];
 
 // Middleware
