@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ChromeSessionFix from './components/ChromeSessionFix';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import BlogPage from './pages/BlogPage';
@@ -7,10 +8,14 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import BlogEditor from './components/BlogEditor';
 import { AuthProvider } from './context/AuthContext';
+import ChromeNotice from './components/ChromeNotice';
 
 function App() {
   return (
+    
     <AuthProvider>
+      <ChromeSessionFix/>
+      <ChromeNotice/>
       <Router>
         <div className="min-h-screen bg-gray-100">
           <Navbar />
