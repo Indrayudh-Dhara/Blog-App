@@ -10,10 +10,14 @@ const {errorHandler} = require('./middleware/errorMiddleware');
 const { sessionConfig } = require('./config/session');
 
 const app = express();
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://blog-47yifnclm-indrayudh-dharas-projects.vercel.app'
+];
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: allowedOrigins,
   credentials: true
 }));
 app.use(express.json());
